@@ -8,11 +8,10 @@ function App() {
     <>
       <Header />
       <main>
-        {data.map((show) => {
-          console.log(show);
-
+        {data.map((show, index) => {
           return (
             <Item
+              key={index}
               time={show.time}
               title={show.title}
               type={show.type}

@@ -16,9 +16,7 @@ header {
 
 main {
   min-height: calc(100vh - 99px);
-}
-
-main {
+  width: min(100% - 32px, 1024px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -30,11 +28,10 @@ main {
 article {
   display: flex;
   align-items: center;
-  flex: 1;
   font-size: 12px;
   padding-block-end: 20px;
   border-bottom: 1px solid #e5e5e5;
-  width: 580px;
+  width: 480px;
 }
 
 h2 {
@@ -65,9 +62,22 @@ article img,
   font-weight: 400;
   margin-block-end: 4px;
 }
+
 .duration {
-  margin-inline-end: 37px;
+  display: inline-block;
+  width: 60px;
 }
+
 .direct {
   color: #ff014b;
+}
+
+@media (max-width: 500px) {
+  main {
+    align-items: start;
+  }
+  article {
+    width: auto;
+    display: flex;
+  }
 }
