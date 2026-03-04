@@ -14,9 +14,9 @@ const Item = ({ show }) => {
         <p className="type">{show.type || "-"}</p>
         <span className="duration">{show.duration || "?? min"}</span>
         {show.isUnseen ? (
-          <span className="direct">{"\u2022 Inédit"}</span>
+          <span className="direct">{"&#x2022; Inédit"}</span>
         ) : show.direct ? (
-          <span className="direct">{`\u2022 Direct`}</span>
+          <span className="direct">{"\u2022 Direct"}</span>
         ) : null}
       </div>
     </article>
