@@ -9,18 +9,7 @@ function App() {
       <Header />
       <main>
         {data.map((show, index) => {
-          return (
-            <Item
-              key={index}
-              time={show.time}
-              title={show.title}
-              type={show.type}
-              image={show.image}
-              duration={show.duration}
-              // isUnseed={show.isUnseen}
-              direct={show.direct}
-            />
-          );
+          return <Item key={`${index} ${show.title}`} show={show} />;
         })}
       </main>
     </>

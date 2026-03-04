@@ -1,19 +1,23 @@
-const Item = ({ time, title, type, image, duration, direct }) => {
+const Item = ({ show }) => {
   return (
     <article>
-      <span className="time">{time}</span>
-      {image ? (
-        <img src={image} />
+      <span className="time">{show.time}</span>
+      {show.image ? (
+        <img src={show.image} />
       ) : (
         <div className="image-placeholder">
           <span>Image pas disponible</span>
         </div>
       )}
       <div className="data">
-        <h2>{title ? title : "Titre pas disponible"}</h2>
-        <p className="type">{type || "-"}</p>
-        <span className="duration">{duration || "?? min"}</span>
-        {direct && <span className="direct">• Direct</span>}
+        <h2>{show.title ? show.title : "Titre pas disponible"}</h2>
+        <p className="type">{show.type || "-"}</p>
+        <span className="duration">{show.duration || "?? min"}</span>
+        {show.isUnseen ? (
+          <span className="direct">{"\u2022 Inédit"}</span>
+        ) : show.direct ? (
+          <span className="direct">{`\u2022 Direct`}</span>
+        ) : null}
       </div>
     </article>
   );

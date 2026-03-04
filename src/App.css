@@ -64,10 +64,13 @@ article img,
   align-items: center;
   text-align: center;
 }
+.data {
+  align-self: stretch;
+}
 
 .type {
   font-weight: 400;
-  margin-block-end: 4px;
+  margin-block-end: 8px;
 }
 
 .duration {
