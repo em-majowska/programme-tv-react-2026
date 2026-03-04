@@ -7,10 +7,17 @@ body {
 header {
   padding-block-start: 37px;
   margin-block-end: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
   img {
-    width: 117px;
-    margin: 0 auto;
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 20px;
   }
 }
 
